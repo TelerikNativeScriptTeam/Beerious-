@@ -1,12 +1,30 @@
-﻿.title {
+﻿@import { url('~/platform.css') };
+
+page {
+	background-color: white;
+	font-size: 17;
+}
+
+actionBar {
+    color: white;
+    background-color: #9e0a18;
+}
+
+TextField {
+    margin: 10;
+    padding: 10; 
+}
+
+.title {
     font-size: 30;
     horizontal-align: center;
     margin: 20;
 }
 
 button {
-    font-size: 42;
     horizontal-align: center;
+    margin: 10;
+    padding: 10;
 }
 
 .message {

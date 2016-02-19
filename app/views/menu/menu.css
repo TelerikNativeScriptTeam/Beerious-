@@ -1,0 +1,11 @@
+page {
+	background-color: #2d2521;
+}
+
+button {
+	color: white;
+	width: 120;
+	background-color: #9e0a18;
+	border-radius: 10;
+	border-color: #9e0a18;
+}

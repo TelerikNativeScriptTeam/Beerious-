@@ -1,0 +1,12 @@
+<Page loaded="loaded">
+	<Page.actionBar>
+    	<ActionBar title="Beers"></ActionBar>
+	</Page.actionBar>
+    <GridLayout>
+        <ListView items="{{ groceryList }}">
+            <ListView.itemTemplate>
+                <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>
