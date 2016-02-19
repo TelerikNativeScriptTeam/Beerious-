@@ -5,7 +5,7 @@ exports.loaded = function (argument) {
 	var page = argument.object;
 	var image = page.getViewById("imageSplash");
 	if(page.ios) {
-		frameModule.Frame.defaultTransition = { name: "slide" };
+		frameModule.Frame.defaultTransition = { name: "slideTop" };
 	}
 	
 	image.animate({
