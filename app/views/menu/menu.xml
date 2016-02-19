@@ -3,7 +3,7 @@
     	<ActionBar title="Menu"></ActionBar>
 	</Page.actionBar>
 	<StackLayout>
-		<Image src="res://Default" height="400" stretch="none" horizontalAlignment="center"/>
+		<Image src="res://icon" height="400" stretch="none" horizontalAlignment="center"/>
 		<GridLayout columns="auto,auto" rows="auto, auto" horizontalAlignment="center">
 			<Button text="Beers" col="0" tap="beersList" />
 			<Button text="My profile" col="1" />
