@@ -1,6 +1,5 @@
 var frameModule = require("ui/frame");
 var ImageModule = require("ui/image");
-frameModule.Frame.defaultTransition = { name: "slideTop" };
 
 exports.loaded = function (argument) {
 	var page = argument.object;
@@ -22,5 +21,5 @@ exports.loaded = function (argument) {
 		}
 		frameModule.topmost().navigate(navigationEntry);
 		//("views/login/login");
-	});
+	});	
 };
