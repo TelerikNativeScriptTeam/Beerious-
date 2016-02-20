@@ -1,7 +1,7 @@
 var frameModule = require("ui/frame");
 
 exports.loaded = function (argument) {
-		var page = argument.object;
+	var page = argument.object;
 	if(page.ios) {
 		frameModule.Frame.defaultTransition = { name: "slide" };
 	}

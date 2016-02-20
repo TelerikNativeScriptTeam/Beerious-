@@ -1,18 +1,34 @@
-var dialogsModule = require("ui/dialogs");
-var Observable = require("data/observable").Observable;
-var ObservableArray = require("data/observable-array").ObservableArray;
-var viewModule = require("ui/core/view");
-var page;
+'use strict'
+let eventModule = require("./list-view-model");
+let frameModule = require("ui/frame");
+var Everlive = require("../../libs/everlive/everlive.all.min");
+var el = new Everlive('vpumzej7kuvt3ul5');
 
-var pageData = new Observable({
-    groceryList: new ObservableArray([
-        { name: "eggs" },
-        { name: "bread" },
-        { name: "cereal" }
-    ])
-});
+function pageLoaded(args) {
+	let page = args.object;
+	var vm = eventModule.evViewModel;
+	page.bindingContext = vm;
+	
+    
+	var data = el.data('Beers');
+	var query = new Everlive.Query();
+	query.where()
+		.done()
+		.orderDesc()
+		.select("name")
+		.skip(0)
+		.take(10);
+		
 
-exports.loaded = function(args) {
-    page = args.object;
-    page.bindingContext = pageData;
-};
+	data.get(query)
+		.then(function(data) {
+			
+			vm.loadProblems(data.result);
+			console.log(JSON.stringify(data.result));
+		}, function(error) {
+			console.log("ERROR!! " + JSON.stringify(error));
+		});
+}
+
+
+exports.pageLoaded = pageLoaded;

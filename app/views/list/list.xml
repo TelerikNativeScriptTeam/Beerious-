@@ -1,12 +1,17 @@
-<Page loaded="loaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
 	<Page.actionBar>
     	<ActionBar title="Beers"></ActionBar>
 	</Page.actionBar>
-    <GridLayout>
-        <ListView items="{{ groceryList }}">
-            <ListView.itemTemplate>
-                <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
-            </ListView.itemTemplate>
-        </ListView>
-    </GridLayout>
+  <StackLayout  cssClass="stackStyle">
+    <Label text="All Beers" cssClass="bigLabelStyle"/>
+    	<ListView  items="{{events}}" >
+  	   	<ListView.itemTemplate>
+  		  	<StackLayout orientation="horizontal"  >
+			      <StackLayout>  
+              <Label text="{{'Name: '+ name}} " id="titleForEvent"/>
+            </StackLayout>
+  			</StackLayout>
+  		</ListView.itemTemplate>
+  	</ListView>  	    
+  </StackLayout>
 </Page>

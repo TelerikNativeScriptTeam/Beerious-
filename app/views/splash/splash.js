@@ -7,10 +7,10 @@ exports.loaded = function (argument) {
 	if(page.ios) {
 		frameModule.Frame.defaultTransition = { name: "slide" };
 	}
-	
+
 	image.animate({
 		opacity: 1,
-		duration: 4000
+		duration: 1000
 	})
 	.then(function() {
 		var navigationEntry = {
