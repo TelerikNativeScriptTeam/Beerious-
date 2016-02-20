@@ -7,6 +7,7 @@ exports.loaded = function (argument) {
 	}
 }
 
+
 exports.beersList = function(argument) {
 	var topmost = frameModule.topmost();
     topmost.navigate("views/list/list");
