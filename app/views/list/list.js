@@ -1,25 +1,23 @@
 'use strict'
-let eventModule = require("./list-view-model");
+let beerModule = require("./list-view-model");
 let frameModule = require("ui/frame");
 var Everlive = require("../../libs/everlive/everlive.all.min");
-var el = new Everlive('vpumzej7kuvt3ul5');
+var el = new Everlive('gueeeo56lwfpwx8g');
 
 function pageLoaded(args) {
 	let page = args.object;
-	var vm = eventModule.evViewModel;
-	page.bindingContext = vm;
-	
+	var vm = beerModule.beViewModel;
+	page.bindingContext = vm;	
     
 	var data = el.data('Beers');
 	var query = new Everlive.Query();
 	query.where()
 		.done()
 		.orderDesc()
-		.select("name")
+		.select("name", "brewedBy", "description", "alc", "image")
 		.skip(0)
-		.take(10);
+		.take(10);			
 		
-
 	data.get(query)
 		.then(function(data) {
 			

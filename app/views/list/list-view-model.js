@@ -7,18 +7,17 @@ let observableArrayModule = require("data/observable-array");
 var topmost = frameMode.topmost();
 
 
- class EventViewModel extends observable.Observable {
+ class BeerViewModel extends observable.Observable {
 
  	constructor() {
  		super();
-
  		this.events = [];
  	}
 
 	loadProblems(data){
-		this.set("events",data);
+		this.set("beers",data);
 	}
  }
 
-exports.EventViewModel = EventViewModel;
-exports.evViewModel = new EventViewModel();
+exports.BeerViewModel = BeerViewModel;
+exports.beViewModel = new BeerViewModel();

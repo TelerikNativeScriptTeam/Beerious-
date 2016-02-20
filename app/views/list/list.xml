@@ -4,11 +4,17 @@
 	</Page.actionBar>
   <StackLayout  cssClass="stackStyle">
     <Label text="All Beers" cssClass="bigLabelStyle"/>
-    	<ListView  items="{{events}}" >
+    	<ListView  items="{{beers}}" >
   	   	<ListView.itemTemplate>
   		  	<StackLayout orientation="horizontal"  >
+            <StackLayout width="150" height="150">
+  				     <Image  src="{{image}}" />
+			      </StackLayout>
 			      <StackLayout>  
-              <Label text="{{'Name: '+ name}} " id="titleForEvent"/>
+              <Label text="{{'Name: '+ name}} "/>
+              <Label text="{{'BrewedBy: '+ brewedBy}} "/>
+              <Label text="{{'Alc: '+ alc}} "/>
+              <Label text="{{'Description: '+ description}} "/>
             </StackLayout>
   			</StackLayout>
   		</ListView.itemTemplate>
