@@ -7,8 +7,17 @@ exports.loaded = function (argument) {
 	}
 }
 
-
 exports.beersList = function(argument) {
 	var topmost = frameModule.topmost();
     topmost.navigate("views/list/list");
+}
+
+exports.login = function(argument) {
+	var topmost = frameModule.topmost();
+    topmost.navigate("views/login/login");
+}
+
+exports.register = function(argument) {
+	var topmost = frameModule.topmost();
+    topmost.navigate("views/register/register");
 }

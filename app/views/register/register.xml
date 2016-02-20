@@ -1,12 +1,12 @@
-<Page loaded="loaded">
+<Page loaded="pageLoaded">
 	<Page.actionBar>
-    	<ActionBar title="Sign up"></ActionBar>
+    	<ActionBar title="Register"></ActionBar>
 	</Page.actionBar>
-    <StackLayout>
+    <StackLayout orientation="vertical">
+    	<Image src="res://Default" height="10" stretch="none" horizontalAlignment="center"/>
+        <TextField id="username" text="{{ username }}" hint="Username" />
+		<TextField id="password" secure="true" text="{{ password }}" hint="Password" />
 
-        <TextField text="{{ email }}" id="email" hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none" />
-        <TextField text="{{ password }}" secure="true" hint="Password" />
-
-        <Button text="Sign Up" tap="register" />
+        <Button text="Register" tap="register" />
     </StackLayout>
 </Page>

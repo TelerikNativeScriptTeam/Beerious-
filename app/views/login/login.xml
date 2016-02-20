@@ -1,13 +1,14 @@
-<Page loaded="loaded">
+<Page loaded="pageLoaded">
 	<Page.actionBar>
     	<ActionBar title="Sign in"></ActionBar>
 	</Page.actionBar>
     <StackLayout orientation="vertical">
     	<Image src="res://Default" height="10" stretch="none" horizontalAlignment="center"/>
-        <TextField id="email" text="{{ email }}" hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none" />
-		<TextField secure="true" text="{{ password }}" hint="Password" />
+        <TextField id="username" text="{{ username }}" hint="Username" />
+		<TextField id="password" secure="true" text="{{ password }}" hint="Password" />
 
         <Button text="Sign in" tap="signIn" />
-        <Button text="Sign up for Groceries" class="link" tap="register" />
+        <Button text="Current User" tap="test" />
+        <Button text="Logout" tap="logout" />
     </StackLayout>
 </Page>
