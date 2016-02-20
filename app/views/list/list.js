@@ -2,7 +2,12 @@
 let beerModule = require("./list-view-model");
 let frameModule = require("ui/frame");
 var Everlive = require("../../libs/everlive/everlive.all.min");
-var el = new Everlive('gueeeo56lwfpwx8g');
+
+var el = new Everlive({
+	appId: 'gueeeo56lwfpwx8g',
+	scheme:'http'
+});
+
 
 function pageLoaded(args) {
 	let page = args.object;
@@ -19,12 +24,13 @@ function pageLoaded(args) {
 		.take(10);			
 		
 	data.get(query)
-		.then(function(data) {
-			
+		.then(function(data) {	
 			vm.loadProblems(data.result);
 			console.log(JSON.stringify(data.result));
 		}, function(error) {
 			console.log("ERROR!! " + JSON.stringify(error));
+			console.log(error);
+			console.log(data.sourceURL);
 		});
 }
 
