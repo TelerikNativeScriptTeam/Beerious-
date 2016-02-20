@@ -1,12 +1,13 @@
-<Page loaded="loaded">
-	<Page.actionBar>
-    	<ActionBar title="Beers"></ActionBar>
-	</Page.actionBar>
-    <GridLayout>
-        <ListView items="{{ groceryList }}">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
+  <StackLayout>
+      <TextField text="{{filter_string}}"/>
+      <ListView id="mainLv" items="{{beerList}}">
             <ListView.itemTemplate>
-                <Label text="{{ name }}" horizontalAlignment="left" verticalAlignment="center"/>
+                <GridLayout class="cell" columns = "90, *, *, 100" rows = "50, 25, 25" tap="onItemTap">
+                    <Image class="image" src="{{ imgUrl }}" stretch="aspectFill" col = "0" row = "0" rowspan = "3" />
+                    <Label class="beer-name" text="{{ name }}" textWrap = "true" col = "1" row = "0" colSpan="2"  />
+                </GridLayout>
             </ListView.itemTemplate>
         </ListView>
-    </GridLayout>
+  </StackLayout>
 </Page>

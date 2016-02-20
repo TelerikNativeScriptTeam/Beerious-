@@ -1,18 +1,10 @@
-var dialogsModule = require("ui/dialogs");
-var Observable = require("data/observable").Observable;
-var ObservableArray = require("data/observable-array").ObservableArray;
-var viewModule = require("ui/core/view");
+var vmModule = require("../../view-models/beer-list-view-model");
 var page;
 
-var pageData = new Observable({
-    groceryList: new ObservableArray([
-        { name: "eggs" },
-        { name: "bread" },
-        { name: "cereal" }
-    ])
-});
-
-exports.loaded = function(args) {
+function pageLoaded(args) {
     page = args.object;
-    page.bindingContext = pageData;
+    page.bindingContext = vmModule.beerListViewModel;
 };
+
+exports.pageLoaded = pageLoaded;
+exports.onItemTap = vmModule.beerListViewModel.onItemTap;
