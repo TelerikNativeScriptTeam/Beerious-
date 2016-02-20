@@ -127,22 +127,22 @@ function updateList(){
 }
 
 function onItemTap(args) {
-  var gridLayout = args.object;
-  var id = gridLayout.id;
-  console.log('main page -> onLvItemTap, object clicked: ' + id);
-  var navigationEntry = {
-          moduleName: "./details-page",
-          context: {
-            selectedId: id
-          },
-          animated: true,
-          navigationTransition: {
-              transition: "flip ",
-          }
-      };
-
-      var topmost = frameModule.topmost();
-      topmost.navigate(navigationEntry);
+//  var gridLayout = args.object;
+//  var id = gridLayout.id;
+  console.log('item tapped');
+//  var navigationEntry = {
+//          moduleName: "./beer-details-page",
+//          context: {
+//            selectedId: id
+//          },
+//          animated: true,
+//          navigationTransition: {
+//              transition: "flip ",
+//          }
+//      };
+//
+//      var topmost = frameModule.topmost();
+//      topmost.navigate(navigationEntry);
 };
 
 updateList();
