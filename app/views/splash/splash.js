@@ -20,7 +20,6 @@ exports.loaded = function (argument) {
 	.then(function() {
 		var navigationEntry = {
 			moduleName: "views/menu/menu",
-    		clearHistory: true
 		}
 		frameModule.topmost().navigate(navigationEntry);
 		//("views/login/login");

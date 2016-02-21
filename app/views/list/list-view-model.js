@@ -112,8 +112,8 @@ class BeerViewModel extends observable.Observable {
 
 	constructor() {
 		super();
-		this._beers = new observableArrayModule.ObservableArray();
-		this._hardcoredBeers = hardcoreBeerList;
+		//this._beers = new observableArrayModule.ObservableArray();
+		this._beers = hardcoreBeerList;
 	}
 
 	loadBeers(data) {
