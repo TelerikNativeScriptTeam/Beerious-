@@ -9,7 +9,6 @@ var el = new Everlive({
 	scheme: 'http',
     token: AppSettings.getString(TOKEN_DATA_KEY)
 });
-var beerIds;
 
 function pageLoaded(args) {
 	let page = args.object;
@@ -19,6 +18,7 @@ function pageLoaded(args) {
 	test(vm);
 
 }
+
 
 function onBeerTap(args) {
 	let page = args.object.page;
@@ -40,7 +40,7 @@ function test(vm) {
 			var username = data.result.Username;
 			console.log(username + " is logged in!");
 			// console.log(JSON.stringify(data.result.drinkedBeers));
-			beerIds = JSON.stringify(data.result.drinkedBeers);
+			var beerIds = JSON.stringify(data.result.drinkedBeers);
 			console.log('user beer ids' + beerIds);
 			getUserBeers(data.result.drinkedBeers, vm);
 		},

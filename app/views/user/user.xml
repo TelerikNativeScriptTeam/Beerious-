@@ -8,7 +8,7 @@
 		<Image src="res://icon.png" stretch="none" horizontalAlignment="center"/>
 		<Label class="username" text="user name" horizontalAlignment="center"/>
 		<Label text="Following {{number}} people"/>
-		<Button text="My Beers" col="0" />
+		<Button text="My Beers" col="0" tap="userBeers" />
 		<Button text="Wishlist" col="1"/>
 		<Button text="Check-ins" col="2" />
 		
