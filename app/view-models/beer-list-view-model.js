@@ -1,7 +1,10 @@
+'use strict'
+
 var frameModule = require("ui/frame");
 var observable = require("data/observable").Observable;
+let observableArrayModule = require("data/observable-array");
 
-var beerList = [
+var hardcoreBeerList = [
         { name: "Brass Lager",
           brewedBy: "Brass Castle Brewery",
           style: "Vienna-Style Lager",
@@ -107,7 +110,8 @@ var beerList = [
 var beerListViewModel = new observable({
   filter_string: '',
   onItemTap: onItemTap,
-  beerList: []
+  beerList: [],
+  hardcoreBeerList: []
 });
 
 beerListViewModel.addEventListener(observable.propertyChangeEvent, function (pcd) {

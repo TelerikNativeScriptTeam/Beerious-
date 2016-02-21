@@ -21,3 +21,9 @@ exports.register = function (argument) {
 	var topmost = frameModule.topmost();
     topmost.navigate("views/register/register");
 }
+
+exports.userProfile = function(argument) {
+	var topmost = frameModule.topmost();
+	topmost.navigate("views/user/user");
+
+}

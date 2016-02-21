@@ -1,4 +1,5 @@
 'use strict'
+
 let beerModule = require("./list-view-model");
 let frameModule = require("ui/frame");
 var AppSettings = require("application-settings");

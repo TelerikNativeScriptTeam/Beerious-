@@ -9,6 +9,8 @@ Telerik NativeScript Course project by Team 11:
 --
 ###The App
 
+![alt text](icon copy.png)
+
 Beerious is for those who want to taste every possible beer there is. 
 
 You can browse our beer database and create wishlists with the beers around the world you want to try, add all the beers you already tried and see where your beer experience stands among your friends. 

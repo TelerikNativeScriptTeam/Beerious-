@@ -1,0 +1,14 @@
+<Page loaded="loaded">
+	<Page.actionBar>
+    	<ActionBar title="Menu"></ActionBar>
+	</Page.actionBar>
+	<StackLayout>
+		<Image src="res://icon.png" stretch="none" horizontalAlignment="center"/>
+		<Label text="Username" horizontalAlignment="center" />
+		<GridLayout columns="auto,auto, auto" horizontalAlignment="center">
+			<Button text="My Beers" col="0" />
+			<Button text="Wishlists" col="1"/>
+			<Button text="Check-ins" col="2" />
+		</GridLayout>
+	</StackLayout>
+</Page>

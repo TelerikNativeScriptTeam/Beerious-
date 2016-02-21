@@ -1,0 +1,11 @@
+
+Image {
+	border-radius: 30;
+	margin-top: 20;
+}
+
+Button {
+	height: 20;
+	background-color: black;
+	color: red;
+}
