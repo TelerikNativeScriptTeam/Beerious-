@@ -1,5 +1,5 @@
 var application = require("application");
-application.mainModule = "views/menu/menu";
+application.mainModule = "views/splash/splash";
 application.cssFile = "./app.css";
 
 global.BS_API_KEY = "$EVERLIVE_API_KEY$";
