@@ -1,9 +1,20 @@
+.username {
+	font-size: 25;
+	margin-bottom: 20;
+}
+
+Button {
+	width: 150;
+}
 
 Image {
 	border-radius: 30;
 	margin-top: 20;
+<<<<<<< HEAD
 }
 
 Button {
 	height: 80;
+=======
+>>>>>>> 71bcd938a6bf5ac3d7cc97510261804dc7fd2e64
 }
