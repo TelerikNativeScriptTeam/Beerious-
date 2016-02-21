@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      loaded="pageLoaded"
+      navigatedTo="pageNavigatedTo">
+	<Page.actionBar>
+    	<ActionBar title="Beer Details"></ActionBar>
+	</Page.actionBar>
+  <StackLayout  cssClass="stackStyle">
+  	  <Image src="{{image}}" width="250" height="250" />
+      <Label text="{{'Name: '+ name}} "/>
+      <Label text="{{'BrewedBy: '+ brewedBy}} "/>
+      <Label text="{{'Alc: '+ alc}} "/>
+      <Label text="{{'Drinked Times: '+ drinkedTimes}} "/>
+      <Label text="{{'Description: '+ description}} "/>
+  </StackLayout>
+</Page>

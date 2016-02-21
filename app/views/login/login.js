@@ -1,53 +1,25 @@
 'use strict'
-var Everlive = require("~/libs/everlive/everlive.all.min");
-var everlive = new Everlive({
-    appId: "gueeeo56lwfpwx8g",
-    scheme: "https"
-});
-var frameModule = require("ui/frame");
-var AppSettings = require("application-settings");
-
-var email;
-var password;
+var UserViewModel = require("../../view-models/user-view-model");
+var user = new UserViewModel();
 
 function pageLoaded(args) {
     let page = args.object;
-    email = page.getViewById("email");
-    password = page.getViewById("password");
-}
-
-function test() {
-    everlive.Users.currentUser(function (data) {
-        if (data.result) {
-            var email = data.result.Username;
-            alert(username + " is logged in!");
-        } else {
-            alert("Missing access token. Please log in!");
-        }
-    }, function (err) {
-        alert(err.message + " Please log in.");
-    });
+    page.bindingContext = user;
 }
 
 function signIn() {
-    everlive.authentication.login(viewModel.email, viewModel.password, function (data) {
-            alert("Welcome back!");
-            AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
-            AppSettings.setString(USER_ID, data.result.principal_id);
-        }, function (err) {
-            alert("Unfortunately an error occurred: " + err.message);
-        });
+    if(!user.isValidEmail()) {
+        alert("Enter a valid email!");
+    }
+    else {
+       user.login();
+    }
 }
 
-function logout() {
-    everlive.authentication.logout(function () {
-        alert("Logout successful!");
-    }, function (err) {
-        alert("Failed to logout: " + err.message);
-    });
+function test(){
+    user.currentUser();
 }
 
 exports.pageLoaded = pageLoaded;
-exports.test = test;
 exports.signIn = signIn;
-exports.logout = logout;
+exports.test = test;

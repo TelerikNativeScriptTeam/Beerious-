@@ -41,7 +41,13 @@ function onBeerTap(args) {
 	let vm = page.bindingContext;
 	let index = args.index;
 	let tappedBeer = vm.beers[index];
-    updateBeer(tappedBeer);
+	let options = {
+    moduleName: './views/beerDetails/beerDetails',
+    context: tappedBeer
+  };
+  frameModule.topmost()
+    .navigate(options);
+   // updateBeer(tappedBeer);
 }
 
 function updateBeer(beer) {
