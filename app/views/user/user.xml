@@ -6,20 +6,11 @@
 	</Page.actionBar>
 	<StackLayout horizontalAlignment="center">
 		<Image src="res://icon.png" stretch="none" horizontalAlignment="center"/>
-<<<<<<< HEAD
-		<Label text="Username" horizontalAlignment="center" />
-		<GridLayout columns="auto,auto, auto" horizontalAlignment="center">
-			<Button text="My Beers" col="0" tap="userBeers" />
-			<Button text="Wishlists" col="1"/>
-			<Button text="Check-ins" col="2" />
-		</GridLayout>
-=======
 		<Label class="username" text="user name" horizontalAlignment="center"/>
 		<Label text="Following {{number}} people"/>
 		<Button text="My Beers" col="0" />
 		<Button text="Wishlist" col="1"/>
 		<Button text="Check-ins" col="2" />
 		
->>>>>>> 71bcd938a6bf5ac3d7cc97510261804dc7fd2e64
 	</StackLayout>
 </Page>
