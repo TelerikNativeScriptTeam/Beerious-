@@ -27,7 +27,7 @@ function pageLoaded(args) {
 
 	data.get(query)
 		.then(function (data) {
-			vm.loadProblems(data.result);
+			vm.loadBeers(data.result);
 			//	console.log(JSON.stringify(data.result));
 		}, function (error) {
 			console.log("ERROR!! " + JSON.stringify(error));

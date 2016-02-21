@@ -5,7 +5,5 @@ Image {
 }
 
 Button {
-	height: 20;
-	background-color: black;
-	color: red;
+	height: 80;
 }

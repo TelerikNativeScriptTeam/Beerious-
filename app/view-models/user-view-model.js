@@ -1,13 +1,14 @@
 'use strict'
-var Everlive = require("~/libs/everlive/everlive.all.min");
-var everlive = new Everlive({
-    appId: "gueeeo56lwfpwx8g",
-    scheme: "https"
-});
 var AppSettings = require("application-settings");
 var fetchModule = require("fetch");
 var validator = require("email-validator");
 var Observable = require("data/observable").Observable;
+var Everlive = require("~/libs/everlive/everlive.all.min");
+var everlive = new Everlive({
+    appId: "gueeeo56lwfpwx8g",
+    scheme: "https",
+    token: AppSettings.getString(TOKEN_DATA_KEY)
+});
 
 function User(info) {
     info = info || {};

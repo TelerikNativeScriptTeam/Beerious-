@@ -116,7 +116,7 @@ class BeerViewModel extends observable.Observable {
 		this._hardcoredBeers = hardcoreBeerList;
 	}
 
-	loadProblems(data) {
+	loadBeers(data) {
 		this.set("beers", data);
 	}
 }
