@@ -4,7 +4,7 @@
 	</Page.actionBar>
     <StackLayout orientation="vertical">
     	<Image src="res://Default" height="10" stretch="none" horizontalAlignment="center"/>
-        <TextField id="username" text="{{ username }}" hint="Username" />
+        <TextField id="email" text="{{ email }}" hint="Email" />
 		<TextField id="password" secure="true" text="{{ password }}" hint="Password" />
 
         <Button text="Register" tap="register" />

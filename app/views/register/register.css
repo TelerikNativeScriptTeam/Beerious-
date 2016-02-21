@@ -4,3 +4,8 @@ page {
 button {
 	color: white;
 }
+
+TextField {
+	background-color: white;
+	border-radius: 10;
+}

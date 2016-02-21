@@ -7,19 +7,19 @@ var everlive = new Everlive({
 var frameModule = require("ui/frame");
 var AppSettings = require("application-settings");
 
-var username;
+var email;
 var password;
 
 function pageLoaded(args) {
     let page = args.object;
-    username = page.getViewById("username");
+    email = page.getViewById("email");
     password = page.getViewById("password");
 }
 
 function test() {
     everlive.Users.currentUser(function (data) {
         if (data.result) {
-            var username = data.result.Username;
+            var email = data.result.Username;
             alert(username + " is logged in!");
         } else {
             alert("Missing access token. Please log in!");
@@ -30,13 +30,13 @@ function test() {
 }
 
 function signIn() {
-    everlive.authentication.login(username.text, password.text, function (data) {
-        alert("Successfully logged the user in");
-        AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
-        AppSettings.setString(USER_ID, data.result.principal_id);
-    }, function (err) {
-        alert("Unfortunately an error occurred: " + err.message);
-    });
+    everlive.authentication.login(viewModel.email, viewModel.password, function (data) {
+            alert("Welcome back!");
+            AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
+            AppSettings.setString(USER_ID, data.result.principal_id);
+        }, function (err) {
+            alert("Unfortunately an error occurred: " + err.message);
+        });
 }
 
 function logout() {
