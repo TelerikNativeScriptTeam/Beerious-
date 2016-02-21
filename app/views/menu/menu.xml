@@ -5,9 +5,8 @@
 	<StackLayout>
 		<Image src="res://icon" height="400" stretch="none" horizontalAlignment="center"/>
 		<GridLayout columns="auto,auto" rows="auto, auto" horizontalAlignment="center">
-			<Button text="Beers" col="0" tap="beersList" />
+			<Button text="Beers" background-image="res://button.png" col="0" tap="beersList" />
 			<Button text="My profile" col="1" tap="userProfile" />
-			<Button text="Friends" col="0" row="1"/>
 			<Button text="Register" col="1" row="1" tap="register" />	
 			<Button text="Login" col="0" row="3" tap="login" />	
 		</GridLayout>
