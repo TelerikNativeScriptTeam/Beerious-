@@ -2,6 +2,7 @@
 let vm = require('~/view-models/beer-details-view-model');
 var frameModule = require("ui/frame");
 var AppSettings = require("application-settings");
+var Toast = require("nativescript-toast");
 var Everlive = require("../../libs/everlive/everlive.all.min");
 var el = new Everlive({
   appId: 'gueeeo56lwfpwx8g',
@@ -23,7 +24,8 @@ function addToWishlist(args) {
   var data = el.data('UserBeers');
   data.create({'name': beer.name, 'brewedBy': beer.brewedBy, 'alc': beer.alc, 'image': beer.image, 'description': beer.description, 'wishlist': true},
     function (data) {
-      alert(JSON.stringify(data));
+      var toast = Toast.makeText("Successfully added to wishlist!");
+      toast.show();
     },
     function (error) {
       alert(JSON.stringify(error));
@@ -34,8 +36,8 @@ function addToDrinked(args) {
   var data = el.data('UserBeers');
   data.create({'name': beer.name, 'brewedBy': beer.brewedBy, 'alc': beer.alc, 'image': beer.image, 'description': beer.description, 'wishlist': false},
     function (data) {
-      console.log('add');   
-      alert(JSON.stringify(data));
+      var toast = Toast.makeText("Successfully added to drinked list!");
+      toast.show();
       updateBeer(beer);
     },
     function (error) {

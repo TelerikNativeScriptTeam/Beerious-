@@ -12,6 +12,7 @@
     "email-validator": "^1.0.4",
     "nativescript-geolocation": "0.0.8",
     "nativescript-grid-view": "^1.2.1",
-    "tns-core-modules": "1.6.0"
+    "tns-core-modules": "1.6.0",
+    "nativescript-toast": "^1.2.0"
   }
 }

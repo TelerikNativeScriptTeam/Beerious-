@@ -1,6 +1,7 @@
 'use strict';
 let vm = require('~/view-models/beer-details-view-model');
 var frameModule = require("ui/frame");
+var Toast = require("nativescript-toast");
 var AppSettings = require("application-settings");
 var Everlive = require("../../libs/everlive/everlive.all.min");
 var el = new Everlive({
@@ -23,7 +24,8 @@ function deleteBeer(args) {
   var data = el.data('UserBeers');
   data.destroySingle({ Id: beer.Id },
     function () {
-      alert('Item successfully deleted.');
+      var toast = Toast.makeText("Beer removed from the list");
+      toast.show();
     },
     function (error) {
       alert(JSON.stringify(error));

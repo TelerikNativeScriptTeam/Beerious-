@@ -2,7 +2,9 @@
 var AppSettings = require("application-settings");
 var fetchModule = require("fetch");
 var validator = require("email-validator");
+var frameModule = require("ui/frame");
 var Observable = require("data/observable").Observable;
+var Toast = require("nativescript-toast");
 var Everlive = require("~/libs/everlive/everlive.all.min");
 var everlive = new Everlive({
     appId: "gueeeo56lwfpwx8g",
@@ -20,10 +22,13 @@ function User(info) {
 
     viewModel.login = function () {
         everlive.authentication.login(viewModel.email, viewModel.password, function (data) {
-            alert("Welcome back!");
+            var toast = Toast.makeText("Welcome back!");
+            toast.show();
             AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
             AppSettings.setString(USER_ID, data.result.principal_id);
             AppSettings.setString(USERNAME, viewModel.email);
+            var topmost = frameModule.topmost();
+            topmost.navigate("views/menu/menu");
         }, function (err) {
             alert("Unfortunately an error occurred: " + err.message);
         });
@@ -36,6 +41,8 @@ function User(info) {
                 AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
                 AppSettings.setString(USER_ID, data.result.principal_id);
                 AppSettings.setString(USERNAME, viewModel.email);
+                var toast = Toast.makeText("Successfully registered");
+                toast.show();
                 var topmost = frameModule.topmost();
                 topmost.navigate("views/menu/menu");
             },
@@ -49,7 +56,8 @@ function User(info) {
         everlive.Users.currentUser(function (data) {
             if (data.result) {
                 var username = data.result.Username;
-                alert(username + " is logged in!");
+                var toast = Toast.makeText(username + " is logged in!");
+                toast.show();
             } else {
                 alert("Missing access token. Please log in!");
             }
@@ -63,13 +71,14 @@ function User(info) {
             AppSettings.setString(TOKEN_DATA_KEY, 'token');
             AppSettings.setString(USER_ID, 'Anonymous')
             AppSettings.setString(USERNAME, 'Anonymous');
-            alert("Logout successful!");
+            var toast = Toast.makeText("Logout successful!");
+            toast.show();
         }, function (err) {
             alert("Failed to logout: " + err.message);
         });
     }
-    
-    viewModel.image = function (){
+
+    viewModel.image = function () {
         everlive.Users.currentUser(function (data) {
             if (data.result) {
                 var username = data.result.Username;
