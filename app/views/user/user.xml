@@ -1,5 +1,4 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" 
-      xmlns:gv="nativescript-grid-view"
       loaded="loaded">
 	<Page.actionBar>
     	<ActionBar title="Menu"></ActionBar>
@@ -14,7 +13,11 @@
 		<Button text="Wishlist" col="1"/>
 		<Button text="Check-ins" col="2" />
 
-		
+		<GridLayout columns="auto,auto, auto" horizontalAlignment="center">
+			<Button text="My Beers" col="0" tap="userBeers" />
+			<Button text="Wishlists" col="1" tap="userWishlist" />
+			<Button text="Check-ins" col="2" />
+		</GridLayout>
 
 	</StackLayout>
 </Page>
