@@ -24,7 +24,7 @@ function onBeerTap(args) {
 	let index = args.index;
 	let tappedBeer = vm.beers[index];
 	let options = {
-		moduleName: './views/beerDetails/beerDetails',
+		moduleName: './views/user-beer-details/user-beer-details',
 		context: tappedBeer
 	};
 	frameModule.topmost()

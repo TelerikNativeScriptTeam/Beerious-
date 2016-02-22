@@ -20,6 +20,11 @@ function test(){
     user.currentUser();
 }
 
+function logout(){
+    user.logout();
+}
+
 exports.pageLoaded = pageLoaded;
 exports.signIn = signIn;
 exports.test = test;
+exports.logout = logout;

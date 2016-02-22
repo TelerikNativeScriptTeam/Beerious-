@@ -12,7 +12,6 @@ class BeerDetailsViewModel extends Observable {
     this.set('alc', beer.alc);
    // this.set('description', beer.description);
     this.set('drinked', beer.drinked);
-    console.log(beer.image);
   }
 }
 

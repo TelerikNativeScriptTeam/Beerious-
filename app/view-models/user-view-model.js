@@ -23,6 +23,7 @@ function User(info) {
             alert("Welcome back!");
             AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
             AppSettings.setString(USER_ID, data.result.principal_id);
+            AppSettings.setString(USERNAME, viewModel.email);
         }, function (err) {
             alert("Unfortunately an error occurred: " + err.message);
         });
@@ -34,6 +35,7 @@ function User(info) {
             function (data) {
                 AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
                 AppSettings.setString(USER_ID, data.result.principal_id);
+                AppSettings.setString(USERNAME, viewModel.email);
                 var topmost = frameModule.topmost();
                 topmost.navigate("views/menu/menu");
             },
@@ -43,7 +45,7 @@ function User(info) {
 
     }
 
-    viewModel.currentUser = function() {
+    viewModel.currentUser = function () {
         everlive.Users.currentUser(function (data) {
             if (data.result) {
                 var username = data.result.Username;
@@ -53,6 +55,17 @@ function User(info) {
             }
         }, function (err) {
             alert(err.message + " Please log in.");
+        });
+    }
+
+    viewModel.logout = function () {
+        everlive.authentication.logout(function () {
+            AppSettings.setString(TOKEN_DATA_KEY, 'token');
+            AppSettings.setString(USER_ID, 'Anonymous')
+            AppSettings.setString(USERNAME, 'Anonymous');
+            alert("Logout successful!");
+        }, function (err) {
+            alert("Failed to logout: " + err.message);
         });
     }
 

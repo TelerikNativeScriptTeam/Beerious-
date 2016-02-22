@@ -3,7 +3,7 @@
     	<ActionBar title="My Beers"></ActionBar>
 	</Page.actionBar>
   <StackLayout  cssClass="stackStyle">
-    <Label text="All Beers" cssClass="bigLabelStyle"/>
+    <Label text="My Beers" cssClass="bigLabelStyle"/>
     	<ListView  items="{{beers}}" itemTap="onBeerTap" >
   	   	<ListView.itemTemplate>
   		  	<StackLayout orientation="horizontal"  >

@@ -31,6 +31,7 @@ function addToWishlist(args) {
 }
 
 function addToDrinked(args) {
+  console.log(AppSettings.getString(USER_ID));
   var data = el.data('UserBeers');
   data.create({'name': beer.name, 'brewedBy': beer.brewedBy, 'alc': beer.alc, 'image': beer.image, 'description': beer.description, 'wishlist': false},
     function (data) {

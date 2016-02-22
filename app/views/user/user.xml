@@ -5,14 +5,7 @@
 	</Page.actionBar>
 	<StackLayout horizontalAlignment="center">
 		<Image src="res://icon.png" stretch="none" horizontalAlignment="center"/>
-		<Label text="Username" horizontalAlignment="center" />
-
-		<Label class="username" text="user name" horizontalAlignment="center"/>
-		<Label text="Following {{number}} people"/>
-		<Button text="My Beers" col="0" tap="userBeers" />
-		<Button text="Wishlist" col="1"/>
-		<Button text="Check-ins" col="2" />
-
+		<Label text="{{'Hello, ' + username }}" horizontalAlignment="center" />
 		<GridLayout columns="auto,auto, auto" horizontalAlignment="center">
 			<Button text="My Beers" col="0" tap="userBeers" />
 			<Button text="Wishlists" col="1" tap="userWishlist" />

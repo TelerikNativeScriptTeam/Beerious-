@@ -41,44 +41,13 @@ function onBeerTap(args) {
 	let vm = page.bindingContext;
 	let index = args.index;
 	let tappedBeer = vm.beers[index];
+	console.log(tappedBeer);
 	let options = {
-		moduleName: './views/beerDetails/beerDetails',
+		moduleName: './views/beer-details/beer-details',
 		context: tappedBeer
 	};
 	frameModule.topmost()
 		.navigate(options);
-}
-
-function updateBeer(beer) {
-	console.log("UPDATED " + beer.name);
-	var data = el.data('Beers');
-
-	var drinkedUserId = AppSettings.getString(USER_ID);
-
-	var attributes = {
-		"$push": {
-			"drinkedBy": drinkedUserId
-		}
-	};
-
-	data.rawUpdate(attributes, beer.Id, function (data) {
-		console.log(JSON.stringify(data));
-	}, function (err) {
-		console.log(JSON.stringify(data));
-	});
-}
-
-exports.onItemSwipe = function(args){
-    //dialogs.alert(args.direction);
-    console.log("swipe");
-}
-
-exports.onItemLongPress = function(args) {
-	console.log("long press");
-}
-
-exports.onItemDoubleTap = function(args) {
-	console.log("double tap");
 }
 
 exports.pageLoaded = pageLoaded;

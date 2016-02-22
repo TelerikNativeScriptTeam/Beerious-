@@ -1,9 +1,9 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
 	<Page.actionBar>
-    	<ActionBar title="My Beers"></ActionBar>
+    	<ActionBar title="My Wishlist"></ActionBar>
 	</Page.actionBar>
   <StackLayout  cssClass="stackStyle">
-    <Label text="All Beers" cssClass="bigLabelStyle"/>
+    <Label text="My Beers" cssClass="bigLabelStyle"/>
     	<ListView  items="{{beers}}" itemTap="onBeerTap" >
   	   	<ListView.itemTemplate>
   		  	<StackLayout orientation="horizontal"  >
