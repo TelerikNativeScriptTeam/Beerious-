@@ -1,5 +1,5 @@
 <Page loaded="loaded">
-	<GridLayout>
-		<Image id="imageSplash" src="res://icon" stretch="none" verticalAlignment="center" horizontalAlignment="center" />
+	<GridLayout id="grid">
+		<!--<Image id="logo" src="res://splashlogo"/>-->
 	</GridLayout>
 </Page>
