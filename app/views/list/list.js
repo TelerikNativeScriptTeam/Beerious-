@@ -68,5 +68,18 @@ function updateBeer(beer) {
 	});
 }
 
+exports.onItemSwipe = function(args){
+    //dialogs.alert(args.direction);
+    console.log("swipe");
+}
+
+exports.onItemLongPress = function(args) {
+	console.log("long press");
+}
+
+exports.onItemDoubleTap = function(args) {
+	console.log("double tap");
+}
+
 exports.pageLoaded = pageLoaded;
 exports.onBeerTap = onBeerTap;

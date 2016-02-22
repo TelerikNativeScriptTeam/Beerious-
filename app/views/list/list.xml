@@ -6,7 +6,7 @@
     <Label text="All Beers" cssClass="bigLabelStyle"/>
     	<ListView  items="{{beers}}" itemTap="onBeerTap" >
   	   	<ListView.itemTemplate>
-  		  	<StackLayout orientation="horizontal"  >
+  		  	<StackLayout orientation="horizontal"  swipe="onItemSwipe" longPress="onItemLongPress" doubleTap="onItemDoubleTap">
             <StackLayout width="150" height="150">
   				     <Image  src="{{image}}" />
 			      </StackLayout>
