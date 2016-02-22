@@ -15,8 +15,7 @@ exports.loaded = function (argument) {
 	item.src = "res://splashlogo";
     item.height = 150;
     item.on("loaded", function (args) {
-		argument.object
-			.animate({
+		item.animate({
 				scale: {x: 0.6, y: 0.6},
 				duration: 1500
 			})
@@ -40,6 +39,7 @@ exports.loaded = function (argument) {
                 });
             });
 	});
+	page = argument.object;
 	var grid = page.getViewById("grid");
     grid.addChild(item);
 }
