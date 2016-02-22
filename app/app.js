@@ -7,7 +7,7 @@ global.BS_SCHEME = "http";
 global.BS_URL = "";
 global.TOKEN_DATA_KEY = "authenticationToken";
 global.USER_ID = "userId";
+global.USERNAME = "Anonymous";
 global.EVERLIVE = null;
 global.MONITOR = null;
-
 application.start();

@@ -3,10 +3,10 @@
 		<ActionBar title="Menu"></ActionBar>
 	</Page.actionBar>
 	<StackLayout horizontalAlignment="center">
-		<Image src="res://icon.png" stretch="none" horizontalAlignment="center" />
-		<Label text="{{'Hello, ' + username }}" horizontalAlignment="center" />
-		<StackLayout width="300" height="300">
-			<Image src="res://logo" id="photo" doubleTap="makePhoto" />
+		<Label id="userLabel" text="{{'Hello, ' + username }}" horizontalAlignment="center" />
+		<Label text="Swipe on the logo to change the picture" horizontalAlignment="center" />
+		<StackLayout width="300" height="200">
+			<Image src="res://splashlogo" id="photo" swipe="makePhoto" />
 		</StackLayout>
 		<GridLayout columns="auto,auto, auto" horizontalAlignment="center">
 			<Button text="My Beers" col="0" tap="userBeers" />
