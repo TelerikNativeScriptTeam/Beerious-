@@ -1,5 +1,5 @@
 'use strict';
-
+var moment = require('moment');
 var Observable = require("data/observable")
   .Observable;
 
@@ -10,8 +10,8 @@ class BeerDetailsViewModel extends Observable {
     this.set('name', beer.name);
     this.set('brewedBy', beer.brewedBy);
     this.set('alc', beer.alc);
-   // this.set('description', beer.description);
     this.set('drinked', beer.drinked);
+    this.set('CreatedAt', moment(beer.CreatedAt).format('DD MMM YYYY HH:mm'));
   }
 }
 

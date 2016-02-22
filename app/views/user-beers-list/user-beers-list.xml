@@ -1,22 +1,22 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="pageLoaded">
-	<Page.actionBar>
-    	<ActionBar title="My Beers"></ActionBar>
-	</Page.actionBar>
-  <StackLayout  cssClass="stackStyle">
-    <Label text="My Beers" cssClass="bigLabelStyle"/>
-    	<ListView  items="{{beers}}" itemTap="onBeerTap" >
-  	   	<ListView.itemTemplate>
-  		  	<StackLayout orientation="horizontal"  >
-            <StackLayout width="150" height="150">
-  				     <Image  src="{{image}}" />
-			      </StackLayout>
-			      <StackLayout>  
-              <Label text="{{'Name: '+ name}} "/>
-              <Label text="{{'BrewedBy: '+ brewedBy}} "/>
-              <Label text="{{'Alc: '+ alc}} "/>
-            </StackLayout>
-  			</StackLayout>
-  		</ListView.itemTemplate>
-  	</ListView>  	    
+  <Page.actionBar>
+    <ActionBar title="My Beers"></ActionBar>
+  </Page.actionBar>
+  <StackLayout cssClass="stackStyle">
+    <Label text="My Beers" cssClass="bigLabelStyle" />
+    <ListView items="{{beers}}" itemTap="onBeerTap">
+      <ListView.itemTemplate>
+        <StackLayout orientation="horizontal">
+          <StackLayout width="150" height="150">
+            <Image src="{{image}}" />
+          </StackLayout>
+          <StackLayout>
+            <Label text="{{'Name: '+ name}} " />
+            <Label text="{{'BrewedBy: '+ brewedBy}} " />
+            <Label text="{{'Alc: '+ alc}} " />
+          </StackLayout>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
   </StackLayout>
 </Page>

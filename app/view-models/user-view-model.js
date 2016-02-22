@@ -68,6 +68,19 @@ function User(info) {
             alert("Failed to logout: " + err.message);
         });
     }
+    
+    viewModel.image = function (){
+        everlive.Users.currentUser(function (data) {
+            if (data.result) {
+                var username = data.result.Username;
+                alert(username + " is logged in!");
+            } else {
+                alert("Missing access token. Please log in!");
+            }
+        }, function (err) {
+            alert(err.message + " Please log in.");
+        });
+    }
 
     viewModel.isValidEmail = function () {
         console.log("inside isValidEmail");

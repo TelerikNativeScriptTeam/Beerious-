@@ -9,11 +9,11 @@
       <Label text="{{'Name: '+ name}} "/>
       <Label text="{{'BrewedBy: '+ brewedBy}} "/>
       <Label text="{{'Alc: '+ alc}} "/>
-      <Label text="{{'Drinked Times: '+ drinked }} "/>
+      <Label text="{{'Drinked by users: '+ drinked }} "/>
       <!--<Label text="{{'Description: '+ description}} "/>-->
     <GridLayout columns="auto,auto" rows="auto, auto" horizontalAlignment="center">
-			<Button text="Add to Drinked" background-image="res://button.png" col="0" tap="addToDrinked" />
-			<Button text="Add to Wishlist" col="1" tap="addToWishlist" />
+			<Button text="Add to Drinked" background-image="res://button.png" col="0" doubleTap="addToDrinked" />
+			<Button text="Add to Wishlist" col="1" doubleTap="addToWishlist" />
 		</GridLayout>
   </StackLayout>
 </Page>

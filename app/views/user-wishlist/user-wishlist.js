@@ -41,7 +41,7 @@ function getUserWishlist(id, vm){
 		.eq('wishlist', true)
 		.done()
 		.orderDesc()
-		.select("name", "brewedBy", "description", "alc", "image");
+		.select("name", "brewedBy", "description", "alc", "image", "CreatedAt");
 
 	data.get(query)
 		.then(function (data) {

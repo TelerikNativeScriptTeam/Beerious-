@@ -9,6 +9,7 @@
       <Label text="{{'Name: '+ name}} "/>
       <Label text="{{'BrewedBy: '+ brewedBy}} "/>
       <Label text="{{'Alc: '+ alc}} "/>
+      <Label text="{{'Added on: ' + CreatedAt }}" />
 			<Button text="DELETE" col="0" longPress="deleteBeer" />
   </StackLayout>
 </Page>

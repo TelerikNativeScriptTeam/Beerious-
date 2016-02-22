@@ -1,6 +1,6 @@
 {
   "nativescript": {
-    "id": "org.nativescript.test",
+    "id": "org.nativescript.Beerious",
     "tns-ios": {
       "version": "1.5.2"
     },

@@ -30,16 +30,6 @@ function deleteBeer(args) {
     });
 }
 
-function updateBeer(beer) {
-  console.log(beer.drinked);
-  var data = el.data('Beers');
-  data.updateSingle({ Id: beer.Id, 'drinked': beer.drinked += 1 }, function (data) {
-    console.log("UPDATEDsadsad ");
-  }, function (err) {
-    console.log("UPDATED yyyyyy");
-  });
-}
-
 module.exports = {
   pageLoaded,
   pageNavigatedTo,

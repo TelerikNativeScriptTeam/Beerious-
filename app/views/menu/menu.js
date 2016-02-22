@@ -17,6 +17,7 @@ exports.login = function (argument) {
     topmost.navigate("views/login/login");
 }
 
+
 exports.register = function (argument) {
 	var topmost = frameModule.topmost();
     topmost.navigate("views/register/register");
