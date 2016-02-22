@@ -4,12 +4,16 @@
 	<Page.actionBar>
     	<ActionBar title="Beer Details"></ActionBar>
 	</Page.actionBar>
-  <StackLayout  cssClass="stackStyle">
+  <StackLayout  cssClass="stackStyle">    
   	  <Image src="{{image}}" width="250" height="250" />
       <Label text="{{'Name: '+ name}} "/>
       <Label text="{{'BrewedBy: '+ brewedBy}} "/>
       <Label text="{{'Alc: '+ alc}} "/>
       <Label text="{{'Drinked Times: '+ drinkedTimes}} "/>
       <Label text="{{'Description: '+ description}} "/>
+    <GridLayout columns="auto,auto" rows="auto, auto" horizontalAlignment="center">
+			<Button text="Add to Drinked" background-image="res://button.png" col="0" tap="addToDrinked" />
+			<Button text="Add to Wishlist" col="1" tap="addToWishlist" />
+		</GridLayout>
   </StackLayout>
 </Page>

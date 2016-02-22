@@ -25,5 +25,4 @@ exports.register = function (argument) {
 exports.userProfile = function(argument) {
 	var topmost = frameModule.topmost();
 	topmost.navigate("views/user/user");
-
 }

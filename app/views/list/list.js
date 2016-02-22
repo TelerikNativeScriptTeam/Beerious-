@@ -10,7 +10,6 @@ var el = new Everlive({
     token: AppSettings.getString(TOKEN_DATA_KEY)
 });
 
-
 function pageLoaded(args) {
 	let page = args.object;
 	var vm = beerModule.beViewModel;
@@ -42,12 +41,11 @@ function onBeerTap(args) {
 	let index = args.index;
 	let tappedBeer = vm.beers[index];
 	let options = {
-    moduleName: './views/beerDetails/beerDetails',
-    context: tappedBeer
-  };
-  frameModule.topmost()
-    .navigate(options);
-   // updateBeer(tappedBeer);
+		moduleName: './views/beerDetails/beerDetails',
+		context: tappedBeer
+	};
+	frameModule.topmost()
+		.navigate(options);
 }
 
 function updateBeer(beer) {
@@ -68,20 +66,6 @@ function updateBeer(beer) {
 		console.log(JSON.stringify(data));
 	});
 }
-
-function test() {
-    el.Users.currentUser(function (data) {
-        if (data.result) {
-            var username = data.result.test;
-            alert(username + " is logged in!");
-        } else {
-            alert("Missing access token. Please log in!");
-        }
-    }, function (err) {
-        alert(err.message + " Please log in.");
-    });
-}
-
 
 exports.pageLoaded = pageLoaded;
 exports.onBeerTap = onBeerTap;

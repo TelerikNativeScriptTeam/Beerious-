@@ -1,6 +1,6 @@
 'use strict'
 
-let beerModule = require("./user-beers-list-view-model");
+let beerModule = require("./wishlist-list-view-model");
 let frameModule = require("ui/frame");
 var AppSettings = require("application-settings");
 var Everlive = require("../../libs/everlive/everlive.all.min");
@@ -15,7 +15,7 @@ function pageLoaded(args) {
 	var vm = beerModule.userBeersViewModel;
 	page.bindingContext = vm;
 	let id = AppSettings.getString(USER_ID);
-	getUserBeerlist(id, vm);
+	getUserWishlist(id, vm);
 }
 
 function onBeerTap(args) {
@@ -32,13 +32,13 @@ function onBeerTap(args) {
 	// updateBeer(tappedBeer);
 }
 
-function getUserBeerlist(id, vm){
+function getUserWishlist(id, vm){
 	console.log("ids2 " + id);
 	var data = el.data('UserBeers');
 	var query = new Everlive.Query();
 	query.where()
 		.eq('CreatedBy', id)
-		.eq('wishlist', false)
+		.eq('wishlist', true)
 		.done()
 		.orderDesc()
 		.select("name", "brewedBy", "description", "alc", "image");
