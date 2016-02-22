@@ -6,6 +6,7 @@
 		</GridLayout>
 		
 		<Image id="photo"/>
+		<Label id="time"/>
 		<Label id="location"/>
 		<Button text="check in" tap="checkin" verticalAlignment="bottom"/>
 

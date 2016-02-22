@@ -1,13 +1,17 @@
 var geolocation = require("nativescript-geolocation");
 var cameraModule = require("camera");
 var imageModule = require("ui/image");
+var moment = require('moment');
+
 var image;
 var locationString;
+var timeString;
 
 exports.loaded = function (argument) {
     var page = argument.object;
     image = page.getViewById("photo");
     locationString = page.getViewById("location");
+    timeString = page.getViewById("time");
 }
 
 function makePicture() {
@@ -16,6 +20,8 @@ function makePicture() {
         .then(function(picture) {
             console.log("Result is an image source instance");
             image.imageSource = picture;
+            timeString.text = moment().format("dddd, MMMM Do YYYY, hA");
+
     });
 }
 
