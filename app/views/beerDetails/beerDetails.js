@@ -34,11 +34,23 @@ function addToDrinked(args) {
   var data = el.data('UserBeers');
   data.create({'name': beer.name, 'brewedBy': beer.brewedBy, 'alc': beer.alc, 'image': beer.image, 'description': beer.description, 'wishlist': false},
     function (data) {
+      console.log('add');   
       alert(JSON.stringify(data));
+      updateBeer(beer);
     },
     function (error) {
       alert(JSON.stringify(error));
     });
+}
+
+function updateBeer(beer) {
+	console.log(beer.drinked);
+	var data = el.data('Beers');
+	data.updateSingle({ Id: beer.Id, 'drinked': beer.drinked += 1 }, function (data) {
+		console.log("UPDATEDsadsad ");
+	}, function (err) {
+		console.log("UPDATED yyyyyy");
+	});
 }
 
 module.exports = {

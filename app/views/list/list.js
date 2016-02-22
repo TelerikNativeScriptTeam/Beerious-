@@ -20,20 +20,21 @@ function pageLoaded(args) {
 	query.where()
 		.done()
 		.orderDesc()
-		.select("name", "brewedBy", "description", "alc", "image")
+		.select("name", "brewedBy", "description", "alc", "image", "drinked")
 		.skip(0)
 		.take(10);
 
 	data.get(query)
 		.then(function (data) {
 			vm.loadBeers(data.result);
-			//	console.log(JSON.stringify(data.result));
+			console.log(JSON.stringify(data.result));
 		}, function (error) {
 			console.log("ERROR!! " + JSON.stringify(error));
 			console.log(error);
 			console.log(data.sourceURL);
 		});
 }
+
 
 function onBeerTap(args) {
 	let page = args.object.page;

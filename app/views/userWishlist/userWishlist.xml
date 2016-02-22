@@ -14,7 +14,6 @@
               <Label text="{{'Name: '+ name}} "/>
               <Label text="{{'BrewedBy: '+ brewedBy}} "/>
               <Label text="{{'Alc: '+ alc}} "/>
-              <Label text="{{'Drinked Times: '+ drinkedTimes}} "/>
             </StackLayout>
   			</StackLayout>
   		</ListView.itemTemplate>
