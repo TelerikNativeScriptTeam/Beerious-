@@ -1,6 +1,10 @@
 <Page loaded="loaded">
 	<Page.actionBar>
-    	<ActionBar title="Menu"></ActionBar>
+    	<ActionBar title="Menu">
+    		<ActionBar.actionItems>
+            	<ActionItem text="Check in" tap="checkin" ios.position="right" />
+        	</ActionBar.actionItems>
+    	</ActionBar>
 	</Page.actionBar>
 	<StackLayout>
 		<Image src="res://logo" height="400" stretch="none" horizontalAlignment="center"/>

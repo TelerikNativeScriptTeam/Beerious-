@@ -26,7 +26,7 @@ You can add pictures of course and check in the location you found the desired c
 
 ###External npm modules 
 * email-validator
-* nativescript-grid-view
+* moment
 * 
 
 

@@ -1,0 +1,13 @@
+<Page loaded="loaded">
+	<StackLayout>
+		<GridLayout columns="auto,auto" rows="auto, auto" horizontalAlignment="center">
+			<Button text="camera" col="0" tap="makePicture"/>
+			<Button text="location" col="1" tap="enableLocationTap"/>
+		</GridLayout>
+		
+		<Image id="photo"/>
+		<Label id="location"/>
+		<Button text="check in" tap="checkin" verticalAlignment="bottom"/>
+
+	</StackLayout>
+</Page>

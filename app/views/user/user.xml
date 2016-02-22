@@ -7,11 +7,6 @@
 	<StackLayout horizontalAlignment="center">
 		<Image src="res://icon.png" stretch="none" horizontalAlignment="center"/>
 		<Label text="Username" horizontalAlignment="center" />
-		<GridLayout columns="auto,auto, auto" horizontalAlignment="center">
-			<Button text="My Beers" col="0" tap="userBeers" />
-			<Button text="Wishlists" col="1"/>
-			<Button text="Check-ins" col="2" />
-		</GridLayout>
 
 		<Label class="username" text="user name" horizontalAlignment="center"/>
 		<Label text="Following {{number}} people"/>
@@ -19,11 +14,7 @@
 		<Button text="Wishlist" col="1"/>
 		<Button text="Check-ins" col="2" />
 
-		<gv:GridView verticalSpacing="3" horizontalSpacing="3" colWidth="100" rowHeight="50" padding="3" id="gridview" height="400">
-            <gv:GridView.itemTemplate>
-                <Label text="text"/>
-            </gv:GridView.itemTemplate>
-        </gv:GridView>
+		
 
 	</StackLayout>
 </Page>

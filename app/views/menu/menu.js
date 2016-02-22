@@ -27,3 +27,8 @@ exports.userProfile = function(argument) {
 	topmost.navigate("views/user/user");
 
 }
+
+exports.checkin = function(argument) {
+	var topmost = frameModule.topmost();
+	topmost.navigate("views/check-in/check-in");
+}
