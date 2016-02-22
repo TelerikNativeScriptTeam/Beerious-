@@ -35,7 +35,7 @@ exports.loaded = function (argument) {
 			.then(function () {
                 
                 frameModule.topmost().navigate({
-                    moduleName: "views/main-page/main-page",
+                    moduleName: "views/menu/menu",
                     animated: false
                 });
             });
