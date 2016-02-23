@@ -38,9 +38,9 @@ function User(info) {
         everlive.Users.register(viewModel.email,
             viewModel.password,
             function (data) {
-                AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
-                AppSettings.setString(USER_ID, data.result.principal_id);
-                AppSettings.setString(USERNAME, viewModel.email);
+              //  AppSettings.setString(TOKEN_DATA_KEY, data.result.access_token);
+             //   AppSettings.setString(USER_ID, data.result.principal_id);
+              //  AppSettings.setString(USERNAME, viewModel.email);
                 var toast = Toast.makeText("Successfully registered");
                 toast.show();
                 var topmost = frameModule.topmost();
